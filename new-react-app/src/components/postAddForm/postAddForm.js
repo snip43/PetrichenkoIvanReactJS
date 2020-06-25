@@ -1,18 +1,21 @@
 import React from 'react';
 import './postAddForm.css';
+import { Button, Form, Row, Col } from 'react-bootstrap';
 
-const PostAddForm = ({ myName }) => {
+const PostAddForm = ({ addItem }) => {
   return (
-    <form action="" className="bottom-panel d-flex">
-      <input
-        type="search"
-        placeholder="О чем вы думаете сейчас ? "
-        className="form-control new-post-label"
-      />
-      <button type="submit" className="btn btn-outline-secondary" onClick={myName}>
-        Добавить
-      </button>
-    </form>
+    <Form>
+      <Row>
+        <Col sm={10}>
+          <Form.Control type="text" placeholder="О чем вы думаете сейчас ?" />
+        </Col>
+        <Col>
+          <Button variant="outline-secondary" onClick={() => addItem('Hello')}>
+            Добавить
+          </Button>
+        </Col>
+      </Row>
+    </Form>
   );
 };
 
