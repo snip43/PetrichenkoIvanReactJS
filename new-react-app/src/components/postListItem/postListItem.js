@@ -18,6 +18,7 @@ export default class PostListItem extends Component {
       like: !like,
     }));
   };
+
   render() {
     const { label } = this.props;
     const { important, like } = this.state;
